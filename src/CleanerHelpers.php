@@ -27,13 +27,13 @@ class CleanerHelpers {
     public static function sizeInBytesToReadable($size)
     {
         if ($size < 1024) {
-            $size = $size." Bytes";
+            $size = $size." ".__('Bytes');
         } else if ($size < 1048576 && $size > 1023) {
-            $size = round($size / 1024, 1) . " KB";
+            $size = round($size / 1024, 1) . " " . __('KB');
         } else if ($size < 1073741824 && $size > 1048575) {
-            $size = round($size / 1048576, 1) . " MB";
+            $size = round($size / 1048576, 1) . " " . __('MB');
         } else {
-            $size = round($size / 1073741824, 1) . " GB";
+            $size = round($size / 1073741824, 1) . " " . __('GB');
         }
 
         return $size;

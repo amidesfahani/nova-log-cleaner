@@ -1,10 +1,10 @@
 <template>
     <card class="flex flex-col items-center justify-center">
-        <div class="flex px-3 py-3">
+        <div class="flex justify-between w-full px-4 py-3">
             <div class="mt-3" v-if="logSize.length">
                 {{ __('Log Size') }}: <code>{{ logSize }}</code>
             </div>
-            <div class="flex-2 pr-8 pl-3 text-right">
+            <div class="flex-2 text-right">
                 <div class="flex flex-col">
                     <button class="btn btn-default btn-danger" v-on:click="isFlushModalOpen = true">
                         {{ __('Flush') }}
